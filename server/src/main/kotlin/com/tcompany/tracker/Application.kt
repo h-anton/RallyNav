@@ -29,4 +29,5 @@ fun Application.module() {
     configureLogin()
 
     configureSockets()
+    configureTripHandling()
 }

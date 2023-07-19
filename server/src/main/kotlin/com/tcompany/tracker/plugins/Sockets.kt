@@ -1,5 +1,6 @@
 package com.tcompany.tracker.plugins
 
+import com.tcompany.tracker.standardRouting
 import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import java.time.Duration
@@ -13,7 +14,8 @@ fun Application.configureSockets() {
         maxFrameSize = Long.MAX_VALUE
         masking = false
     }
-    routing {
+
+    standardRouting {
         webSocket("/ws") { // websocketSession
             for (frame in incoming) {
                 if (frame is Frame.Text) {

@@ -5,6 +5,9 @@ import com.tcompany.tracker.database.database
 import com.tcompany.tracker.schemas.ClientService
 import com.tcompany.tracker.schemas.RentService
 import com.tcompany.tracker.database.SimpleService
+import com.tcompany.tracker.schemas.Client
+import com.tcompany.tracker.schemas.Rent
+import com.tcompany.tracker.standardRouting
 import io.ktor.http.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
@@ -15,17 +18,47 @@ import io.ktor.server.auth.*
 import io.ktor.server.auth.jwt.*
 import io.ktor.server.plugins.*
 import io.ktor.server.routing.*
+import kotlinx.datetime.Clock
+import kotlinx.datetime.Instant
+import org.postgresql.gss.MakeGSS.authenticate
 
 fun Application.configureDatabases() {
 
-    val dbConnection: Connection = connectToPostgres(false)
+    val dbConnection: Connection = connectToPostgres(developmentMode)
 
     install(DatabaseServices) {
         val clientService = add(ClientService(dbConnection))
         val rentService = add(RentService(dbConnection, clientService))
     }
 
-    routing {
+    if (developmentMode) {
+        val clientService = database<ClientService>()
+        val rentService = database<RentService>()
+
+        runBlocking {
+            val clientId = clientService.create(Client(
+                null,
+                "Admin",
+                "admin@admin.org",
+                "+066606660",
+                "Admin Street",
+                "Nowhere",
+                "Somewhere",
+                "666"))
+
+            rentService.create(
+                Rent(
+                    null,
+                    clientService.asLazy(clientId),
+                    "admin",
+                    Clock.System.now(),
+                    Instant.DISTANT_FUTURE
+                )
+            )
+        }
+    }
+
+    standardRouting {
         authenticate {
             configureServiceRouting("clients", this@configureDatabases.database<ClientService>())
             configureServiceRouting("rents", this@configureDatabases.database<RentService>())

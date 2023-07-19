@@ -4,6 +4,7 @@ import com.tcompany.tracker.JWTHelper
 import com.tcompany.tracker.database.database
 import com.tcompany.tracker.schemas.RentService
 import com.tcompany.tracker.setupCookieJWT
+import com.tcompany.tracker.standardRouting
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
@@ -22,7 +23,7 @@ data class TokenLogin(
 fun Application.configureLogin() {
     val rentService = database<RentService>()
 
-    routing {
+    standardRouting {
         post("/tlogin") {
             val login = call.receive<TokenLogin>()
 
