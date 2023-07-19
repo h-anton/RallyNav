@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage';
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import { getCookies } from './api';
+import UploadTripPage from './pages/UploadTripPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <MainPage/>
+      },
+      {
+        path: "upload-trip",
+        element: <UploadTripPage/>
       }
     ]
   }

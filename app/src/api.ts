@@ -1,5 +1,5 @@
 
-import _axios from "axios"
+import _axios, { AxiosRequestConfig } from "axios"
 import { AxiosInstance } from "axios"
 import { DependencyList, useEffect, useState } from "react"
 
@@ -13,13 +13,7 @@ const axios: AxiosInstance = _axios.create({
 
 // defining a custom error handler for all APIs
 const errorHandler = (error: any) => {
-    const statusCode = error.response?.status
-
-    // logging only errors that are not 401
-    if (statusCode && statusCode !== 401) {
-        console.error(error)
-    }
-
+    console.error(error)
     return Promise.reject(error)
 }
 
@@ -41,23 +35,23 @@ export class ApiInstance {
         return (await axios.post('/tlogin', data)).data
     }
 
-    get<T>(url: string, params?: any): Promise<T> {
-        return axios.get<T>(url, { params })
+    get<T>(url: string, params?: AxiosRequestConfig): Promise<T> {
+        return axios.get<T>(url, params)
             .then((response) => response.data)
     }
 
-    post<C, T>(url: string, data: C, params?: any): Promise<T> {
-        return axios.post<T>(url, data, { params })
+    post<C, T>(url: string, data: C, params?: AxiosRequestConfig): Promise<T> {
+        return axios.post<T>(url, data, params)
             .then((response) => response.data)
     }
 
-    put<C, T>(url: string, data: C, params?: any): Promise<T> {
-        return axios.put<T>(url, data, { params })
+    put<C, T>(url: string, data: C, params?: AxiosRequestConfig): Promise<T> {
+        return axios.put<T>(url, data, params)
             .then((response) => response.data)
     }
 
-    delete<T>(url: string, params?: any): Promise<T> {
-        return axios.delete<T>(url, { params })
+    delete<T>(url: string, params?: AxiosRequestConfig): Promise<T> {
+        return axios.delete<T>(url, params)
             .then((response) => response.data)
     }
 }
@@ -77,7 +71,7 @@ export function getCookies() {
 
 const api = new ApiInstance()
 
-export function useApi<T>(use: (instance: ApiInstance) => Promise<T>): () => Promise<T> {
+export function callApi<T>(use: (instance: ApiInstance) => Promise<T>): () => Promise<T> {
     return async () => await use(api)
 }
 
@@ -93,9 +87,8 @@ export function useApiWithLoading<T>(use: (instance: ApiInstance) => Promise<T>,
 
     useEffect(() => {
         use(api).then((result) => {
-            setValue(result)
-        }).finally(() => {
             setLoading(false)
+            setValue(result)
         })
 
         return () => {}

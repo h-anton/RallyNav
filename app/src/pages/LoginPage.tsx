@@ -1,12 +1,12 @@
 import { Alert, Button, Card, CardActions, CardContent, Grid, TextField, Typography } from "@mui/material";
-import { useApi } from "../api";
+import { callApi } from "../api";
 import { useState } from "react";
 
 export default function LoginPage(props: {setLoggedIn: (loggedIn: boolean) => void}) {
     const [token, setToken] = useState("");
     const [error, setError] = useState("");
 
-    let onLogin = useApi(async (api) => {
+    let onLogin = callApi(async (api) => {
         try {
             await api.token_login({ token })
             props.setLoggedIn(true)
