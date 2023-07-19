@@ -19,15 +19,15 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
 #Uncomment for hardware floating point
-#add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
-#add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
-#add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
+add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
+add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
 
 #Uncomment for software floating point
 #add_compile_options(-mfloat-abi=soft)
 
 add_compile_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
-add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
+add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -fno-rtti)
 
 # uncomment to mitigate c++17 absolute addresses warnings
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-register")
@@ -46,14 +46,16 @@ elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
     add_compile_options(-Os)
 else ()
     message(STATUS "Minimal optimization, debug info included")
-    add_compile_options(-Og -g)
+    add_compile_options(-Os -g)
 endif ()
 
-include_directories(Core/Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include)
+include_directories(Core/Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include TouchGFX/App TouchGFX/target/generated TouchGFX/target Middlewares/ST/touchgfx/framework/include TouchGFX/generated/fonts/include TouchGFX/generated/gui_generated/include TouchGFX/generated/images/include TouchGFX/generated/texts/include TouchGFX/generated/videos/include TouchGFX/gui/include Middlewares/Third_Party/FreeRTOS/Source/include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F Core/Inc TouchGFX/App TouchGFX/target/generated TouchGFX/target Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Middlewares/Third_Party/FreeRTOS/Source/include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include Middlewares/ST/touchgfx/framework/include TouchGFX/generated/fonts/include TouchGFX/generated/gui_generated/include TouchGFX/generated/images/include TouchGFX/generated/texts/include TouchGFX/generated/videos/include TouchGFX/gui/include)
+include_directories(Drivers/BSP/STM32H735G-DK) # include BSP headers
 
-add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32H735xx)
+add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32H735xx -DDEBUG -DUSE_HAL_DRIVER -DSTM32H735xx)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "TouchGFX/*.*" "Core/*.*" "Drivers/*.*" "Middlewares/*.*" "TouchGFX/*.*" "Core/*.*" "Middlewares/*.*" "Drivers/*.*")
+list(FILTER SOURCES EXCLUDE REGEX ".*simulator.*|SDL2|.*\\.a|.*\\.lib|.*touchgfx/os.*") # exclude incorrect files
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H735IGKX_FLASH.ld)
 
@@ -62,6 +64,7 @@ add_link_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
 add_link_options(-T ${LINKER_SCRIPT})
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
+target_link_libraries(${PROJECT_NAME}.elf ${PROJECT_SOURCE_DIR}/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc/libtouchgfx-float-abi-hard.a)
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.22.0">
+  <Languages>
+    <Language Id="GBR" />
+    <Language Id="DNK" />
+    <Language Id="JPN" />
+    <Language Id="UKR" />
+    <Language Id="NLD" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="Demo_View_Mcu_Load_text" Alignment="Left" TypographyId="DemoView_McuLoad_Text">
+        <Translation Language="GBR">MCU load: </Translation>
+        <Translation Language="DNK">MCU load: </Translation>
+        <Translation Language="JPN">MCU load: </Translation>
+        <Translation Language="UKR">MCU load: </Translation>
+        <Translation Language="NLD">MCU load: </Translation>
+      </Text>
+      <Text Id="Demo_View_Mcu_Load_value" Alignment="Right" TypographyId="DemoView_McuLoad_Text">
+        <Translation Language="GBR">&lt;value&gt; %</Translation>
+        <Translation Language="DNK">&lt;value&gt; %</Translation>
+        <Translation Language="JPN">&lt;value&gt; %</Translation>
+        <Translation Language="UKR">&lt;value&gt; %</Translation>
+        <Translation Language="NLD">&lt;value&gt; %</Translation>
+      </Text>
+      <Text Id="Demo_View_Mcu_Load_text_small" Alignment="Left" TypographyId="DemoView_McuLoad_Text_Small">
+        <Translation Language="GBR">MCU load: </Translation>
+        <Translation Language="DNK">MCU load: </Translation>
+        <Translation Language="JPN">MCU load: </Translation>
+        <Translation Language="UKR">MCU load: </Translation>
+        <Translation Language="NLD">MCU load: </Translation>
+      </Text>
+      <Text Id="Demo_View_Mcu_Load_value_small" Alignment="Right" TypographyId="DemoView_McuLoad_Text_Small">
+        <Translation Language="GBR">&lt;value&gt; %</Translation>
+        <Translation Language="DNK">&lt;value&gt; %</Translation>
+        <Translation Language="JPN">&lt;value&gt; %</Translation>
+        <Translation Language="UKR">&lt;value&gt; %</Translation>
+        <Translation Language="NLD">&lt;value&gt; %</Translation>
+      </Text>
+      <Text Id="Poster_Headline_00" Alignment="Left" TypographyId="PosterHeadline">
+        <Translation Language="GBR">About TouchGFX</Translation>
+        <Translation Language="DNK">Om TouchGFX</Translation>
+        <Translation Language="JPN">TouchGFXについて</Translation>
+        <Translation Language="UKR">Про TouchGFX</Translation>
+        <Translation Language="NLD">Over TouchGFX</Translation>
+      </Text>
+      <Text Id="Poster_Text_00" Alignment="Left" TypographyId="PosterText">
+        <Translation Language="GBR">A unique software framework that &#10;unlocks the graphical user interface &#10;performance of your low-cost &#10;hardware (e.g. Cortex M).&#10;&#10;The revolutionizing technology breaks &#10;existing restraints, as it lets you create&#10;sophisticated GUIs that fully live up to &#10;today’s smartphone standards at a &#10;fraction of the cost.&#10;&#10;By using TouchGFX, your embedded &#10;product gets outstanding graphics and &#10;smooth animations with minimal resource&#10;and power consumption. You get a high-&#10;end product with a low cost per unit.&#10;</Translation>
+        <Translation Language="DNK">Et unikt softwareframework som muliggør &#10;imponerende grafiske brugerflader på &#10;billig hardware (f.eks. Cortex M).&#10; &#10;Den revolutionerende teknologi bryder &#10;med nuværende barrierer og lader dig ska-&#10;be sofistikerede GUI ‘er, som til fulde lever &#10;op til tidens smartphone standarder, til en &#10;brøkdel af prisen. &#10;&#10;Ved at bruge TouchGFX får dit indlejrede &#10;produkt fremragende grafik og flydende &#10;animationer med minimal ressource- og &#10;energiforbrug. Du får et high-end-produkt &#10;med en lav pris pr. enhed.&#10;</Translation>
+        <Translation Language="JPN">Cortex-Mのような低コストのハード&#10;ウェアにおいて、グラフィカル・&#10;ユーザー・インターフェース性能を&#10;解き放つ、ユニークなソフトウェア&#10;フレームワークです。&#10;&#10;革新的なTouchGFXテクノロジーは、&#10;現行のマイクロコントローラの制約&#10;を打ち破ります。ユニット単価の&#10;ほんの一部だけで、今日のスマート&#10;フォン基準を満たす、洗練された&#10;組込みディスプレイソリューション&#10;を創造していただけます。&#10;</Translation>
+        <Translation Language="UKR">Унікальна бібліотека програмного &#10;забезпечення що забеспечує &#10;потужну роботу графічного &#10;інтерфейсу на Вашому дешевому &#10;апаратному забеспеченні &#10;(наприклад Cortex M)&#10;&#10;Революційні технологіі які &#10;використані в TouchGFX руйнують &#10;існуючі обмеження &#10;мікроконтроллерів та дают &#10;можливість создавати складні &#10;рішення що до встраюваємих &#10;систем. Такі системи якісно ні &#10;відрізнити від сучасних стандартів &#10;смартфонів як у гафічному так, &#10;навіть, ціновому діапазоні.&#10;&#10;Використовуя бібліотеку TouchGFX &#10;ваш продукт отримує найсучаснішу &#10;графічну якість та найгладкішу &#10;анімацию використовуя мінимальні &#10;обчислювальні ресурси та &#10;енерго-використання. Ви отримуєте &#10;найсучасниший "High End" продукт з &#10;низькою ціною за одиницю.&#10;</Translation>
+        <Translation Language="NLD">Een uniek softwareframework dat &#10;een imponerende graphical user &#10;interface  op uw low- cost hardware &#10;mogelijk maakt (bijv. Cortex M ).&#10;&#10;De revolutionaire in TouchGFX &#10;technologie heft bestaande beperkingen &#10;van microcontrollers op laat u &#10;geavanceerde GUI’s maken die volledig &#10;voldoen aan de smartphonenormen &#10;van vandaag voor een fractie van de &#10;kosten per eenheid.&#10;&#10;Door TouchGFX te gebruiken, krijgt uw &#10;embedded product uitstekende &#10;grafieken en vloeiende animaties met &#10;minimale middelen en stroomverbruik. &#10;U krijgt een high-end product met een &#10;lage prijs per eenheid.&#10;</Translation>
+      </Text>
+      <Text Id="Poster_Headline_01" Alignment="Left" TypographyId="PosterHeadline">
+        <Translation Language="GBR">Alpha Blending</Translation>
+        <Translation Language="DNK">Alpha Blending</Translation>
+        <Translation Language="JPN">アルファブレンド</Translation>
+        <Translation Language="UKR">Alpha Blending</Translation>
+        <Translation Language="NLD">Alpha Blending</Translation>
+      </Text>
+      <Text Id="Poster_Text_01" Alignment="Left" TypographyId="PosterText">
+        <Translation Language="GBR">Alpha blending is the process of &#10;combining an image with a background &#10;to create the appearance of partial or &#10;full transparency.&#10;&#10;TouchGFX supports per pixel alpha &#10;blending of images with a minimum &#10;strain on the MCU. This feature enables &#10;smooth looking graphics and animations &#10;in your TouchGFX applications.&#10;</Translation>
+        <Translation Language="DNK">Alpha blending er den proces, hvor et bil-&#10;lede  og en baggrund bliver kombineret &#10;for at skabe enten hel eller delvis &#10;gennemsigtighed. &#10;&#10;TouchGFX understøtter pr. pixel alpha &#10;blending af billeder med en minimal &#10;belastning af MCU’en. &#10;Denne funktion gør det muligt at skabe &#10;imponerende grafik og animationer i dine &#10;TouchGFX applikationer.&#10;</Translation>
+        <Translation Language="JPN">アルファブレンドとは、画像と背景&#10;の合成により画像の部分的な露出、&#10;または完全な透過を行う処理です。&#10;&#10;TouchGFXは、最小限のMCU負荷で&#10;ピクセル単位でのアルファブレンド&#10;をサポートします。この機能はあな&#10;たのTouchGFXアプリケーションに&#10;おいて、画像のスムージングと&#10;アニメーションを可能にします。&#10;</Translation>
+        <Translation Language="UKR">Alpha Blending це процес накладання &#10;зображення на фонове зображення &#10;що дає можливість отримати ефект &#10;часткової або повної прозорості.&#10;&#10;Бібліотека TouchGFX має підтримку &#10;піксельного Alpha Blending з &#10;найменшим використанням &#10;процесорного часу та ресурсів. &#10;Ця унікальна функція біблиотеки дає &#10;можливість створювання дуже &#10;гладкої анімаціі та графіки у Ваших &#10;розробках на TouchGFX.&#10;</Translation>
+        <Translation Language="NLD">Alpha blending is een proces, waar van &#10;een afbeelding met een achtergrond &#10;wordt gecombineerd om een gehele of &#10;gedeeltelijke doorzichtigheid te krijgen.&#10;&#10;TouchGFX ondersteunt per pixel alpha &#10;blending van beelden met een minimale &#10;belasting op de MCU . Deze functie &#10;maakt het mogelijk schitterende grafiek &#10;en animaties in uw TouchGFX &#10;applicaties te maken.&#10;</Translation>
+      </Text>
+      <Text Id="Poster_Headline_02" Alignment="Left" TypographyId="PosterHeadline">
+        <Translation Language="GBR">Fonts and Languages</Translation>
+        <Translation Language="DNK">Fonte og Sprog</Translation>
+        <Translation Language="JPN">フォントおよび言語&#10;</Translation>
+        <Translation Language="UKR">Шрифти та мови</Translation>
+        <Translation Language="NLD">Lettertypen en talen</Translation>
+      </Text>
+      <Text Id="Poster_Text_02" Alignment="Left" TypographyId="PosterText">
+        <Translation Language="GBR">TouchGFX supports multiple languages &#10;and scripts, such as Latin, Cyrillic, Chinese, &#10;and Japanese. Translations are easily &#10;managed in a separate text spreadsheet. &#10;&#10;An integrated font converter creates &#10;internal representation of any TrueType &#10;font at compile time. TouchGFX uses the &#10;font-specific kerning information to &#10;adjust character positions.&#10;</Translation>
+        <Translation Language="DNK">TouchGFX understøtter adskillige sprog &#10;og skrifttyper, så som latinsk, kyrillisk, &#10;kinesisk og japansk. Oversættelser hånd-&#10;teres nemt i det separate tekstark.&#10;&#10;En integreret font-converter laver intern &#10;repræsentation og oversættelse af enhver &#10;TrueType font på kompileringstidspunktet. &#10;TouchGFX bruger den fontspecifikke &#10;kerninginformation til at tilpasse de en-&#10;kelte tegns placeringer.&#10;</Translation>
+        <Translation Language="JPN">TouchGFXは多言語仕様となっており、&#10;ラテン語、キリル文字、中国語や&#10;日本語のような文字体系にも対応し&#10;ます。翻訳文は分離されたテキスト&#10;スプレッドシートにて容易に管理&#10;することができます。&#10;&#10;統合フォントコンバータは、&#10;コンパイルする際に任意のTrueType&#10;フォントから内部表現コードを生成&#10;します。TouchGFXは文字の配置を&#10;調整するためにフォント依存の&#10;カーニング情報を使用します。&#10;</Translation>
+        <Translation Language="UKR">TouchGFX має підтримку &#10;різноманітних мов та шрифтів, &#10;таких як Латинська, Кирилиця, &#10;Китайська та Японська мови.&#10;Управління перекладами дуже &#10;просте та використовує звичайні &#10;текстові таблиці.&#10;&#10;Інтегрований конвертор шрифтів &#10;створює внутрішній формат &#10;будь-якого True Type шрифта під &#10;час компіляціі. TouchGFX &#10;використовує потрібний кернінг &#10;що до обраного шрифта та &#10;регулює позицію кожного символу.&#10;</Translation>
+        <Translation Language="NLD">TouchGFX ondersteunt meerdere talen &#10;en lettertekens , zoals het Latijn , &#10;Cyrillisch , Chinees en Japans. &#10;Vertalingen kunt u gemakkelijk&#10;beheren in een spreadsheet .&#10;&#10;Een geïntegreerde font-converter creëert &#10;tijdens het compileren een interne &#10;representatie van elk TrueType &#10;lettertype. TouchGFX  gebruikt de &#10;lettertype-specifieke spatierings-&#10;informatie om de letterposities aan te &#10;passen.&#10;</Translation>
+      </Text>
+      <Text Id="Three_Way_Progress_Bar_Percentage" Alignment="Center" TypographyId="ThreeWayProgressBarPercentage">
+        <Translation Language="GBR">&lt;value&gt; %</Translation>
+        <Translation Language="DNK">&lt;value&gt; %</Translation>
+        <Translation Language="JPN">&lt;value&gt; %</Translation>
+        <Translation Language="UKR">&lt;value&gt; %</Translation>
+        <Translation Language="NLD">&lt;value&gt; %</Translation>
+      </Text>
+      <Text Id="Three_Way_Progress_Bar_scan" Alignment="Center" TypographyId="ThreeWayProgressBarButton">
+        <Translation Language="GBR">Press to Scan</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Three_Way_Progress_Bar_scanning" Alignment="Center" TypographyId="ThreeWayProgressBarButton">
+        <Translation Language="GBR">Scanning…</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Three_Way_Progress_bar_status" Alignment="Center" TypographyId="CustomControlsStatus">
+        <Translation Language="GBR">Scan completed&#10;no errors</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Percentage_Bar_readout" Alignment="Center" TypographyId="PercentageBarReadout">
+        <Translation Language="GBR">&lt;value&gt;%</Translation>
+        <Translation Language="DNK">&lt;value&gt;%</Translation>
+        <Translation Language="JPN">&lt;value&gt;%</Translation>
+        <Translation Language="UKR">&lt;value&gt;%</Translation>
+        <Translation Language="NLD">&lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="Percentage_Bar_headline" Alignment="Center" TypographyId="PercentageBarHeadline">
+        <Translation Language="GBR">Percentage Bar</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Datepicker_Months" Alignment="Left" TypographyId="DatePicker">
+        <Translation Language="GBR">January&#10;&#10;February&#10;&#10;March&#10;&#10;April&#10;&#10;May&#10;&#10;June&#10;&#10;July&#10;&#10;August&#10;&#10;September&#10;&#10;October&#10;&#10;November&#10;&#10;December</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Datepicker_Years" Alignment="Left" TypographyId="DatePicker">
+        <Translation Language="GBR">2012&#10;&#10;2013&#10;&#10;2014&#10;&#10;2015&#10;&#10;2016&#10;&#10;2017&#10;&#10;2018&#10;&#10;2019&#10;&#10;2020&#10;&#10;2021&#10;&#10;2022&#10;&#10;2023&#10;&#10;2024</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Datepicker_Day_28" Alignment="Left" TypographyId="DatePicker">
+        <Translation Language="GBR">1&#10;&#10;2&#10;&#10;3&#10;&#10;4&#10;&#10;5&#10;&#10;6&#10;&#10;7&#10;&#10;8&#10;&#10;9&#10;&#10;10&#10;&#10;11&#10;&#10;12&#10;&#10;13&#10;&#10;14&#10;&#10;15&#10;&#10;16&#10;&#10;17&#10;&#10;18&#10;&#10;19&#10;&#10;20&#10;&#10;21&#10;&#10;22&#10;&#10;23&#10;&#10;24&#10;&#10;25&#10;&#10;26&#10;&#10;27&#10;&#10;28</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Datepicker_Day_29" Alignment="Left" TypographyId="DatePicker">
+        <Translation Language="GBR">&#10;29</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Datepicker_Day_30" Alignment="Left" TypographyId="DatePicker">
+        <Translation Language="GBR">&#10;30</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Datepicker_Day_31" Alignment="Left" TypographyId="DatePicker">
+        <Translation Language="GBR">&#10;31</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Linear" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Linear</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Back" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Back</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Bounce" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Bounce</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Circular" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Circular</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Cubic" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Cubic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Elastic" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Elastic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Exponential" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Exponential</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Quadratic" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Quadratic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Quartic" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Quartic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Quintic" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Quintic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Sinusoidal" Alignment="Center" TypographyId="EasingEquation">
+        <Translation Language="GBR">Sinusoidal</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Linear_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Lin.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Back_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Back</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Bounce_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Bounce</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Circular_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Circ.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Cubic_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Cubic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Elastic_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Elastic</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Exponential_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Exp.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Quadratic_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Quad.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Quartic_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Quart.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Quintic_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Quint.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Sinusoidal_Short" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Sin.</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Ease_In" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Ease In</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Ease_Out" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Ease Out</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Easing_Equation_Ease_InOut" Alignment="Center" TypographyId="EasingEquationButton">
+        <Translation Language="GBR">Ease In/Out</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_y_value" Alignment="Right" TypographyId="Graph_Y_value">
+        <Translation Language="GBR">&lt;value&gt;</Translation>
+        <Translation Language="DNK">&lt;value&gt;</Translation>
+        <Translation Language="JPN">&lt;value&gt;</Translation>
+        <Translation Language="UKR">&lt;value&gt;</Translation>
+        <Translation Language="NLD">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="Graph_legend_text_00" Alignment="Left" TypographyId="Graph_legend">
+        <Translation Language="GBR">Series 1:</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_legend_text_01" Alignment="Left" TypographyId="Graph_legend">
+        <Translation Language="GBR">Series 2:</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_legend_text_02" Alignment="Left" TypographyId="Graph_legend">
+        <Translation Language="GBR">Series 3:</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_legend_text_03" Alignment="Left" TypographyId="Graph_legend">
+        <Translation Language="GBR">Series 4:</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_legend_text_04" Alignment="Left" TypographyId="Graph_legend">
+        <Translation Language="GBR">Series 5:</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_legend_text_05" Alignment="Left" TypographyId="Graph_legend">
+        <Translation Language="GBR">Series 6:</Translation>
+        <Translation Language="DNK">N/A</Translation>
+        <Translation Language="JPN">N/A</Translation>
+        <Translation Language="UKR">N/A</Translation>
+        <Translation Language="NLD">N/A</Translation>
+      </Text>
+      <Text Id="Graph_legend_value_text" Alignment="Left" TypographyId="Graph_legend_value">
+        <Translation Language="GBR">&lt;value&gt;%</Translation>
+        <Translation Language="DNK">&lt;value&gt;%</Translation>
+        <Translation Language="JPN">&lt;value&gt;%</Translation>
+        <Translation Language="UKR">&lt;value&gt;%</Translation>
+        <Translation Language="NLD">&lt;value&gt;%</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="DemoView_McuLoad_Text" Font="Asap-Regular.ttf" Size="12" Bpp="4" Direction="LTR" WildcardCharacterRanges="0-9" />
+    <Typography Id="DemoView_McuLoad_Text_Small" Font="Asap-Regular.ttf" Size="11" Bpp="4" Direction="LTR" WildcardCharacterRanges="0-9" />
+    <Typography Id="PosterHeadline" Font="Asap-Regular.ttf" Size="18" Bpp="4" Direction="LTR">
+      <LanguageSetting Language="JPN" Font="ipaexg.ttf" Size="18" Bpp="4" Direction="LTR" />
+      <LanguageSetting Language="UKR" Font="NotoSans-Regular.ttf" Size="18" Bpp="4" Direction="LTR" />
+    </Typography>
+    <Typography Id="PosterText" Font="Asap-Regular.ttf" Size="12" Bpp="4" Direction="LTR">
+      <LanguageSetting Language="JPN" Font="ipaexg.ttf" Size="12" Bpp="4" Direction="LTR" />
+      <LanguageSetting Language="UKR" Font="NotoSans-Regular.ttf" Size="12" Bpp="4" Direction="LTR" />
+    </Typography>
+    <Typography Id="ThreeWayProgressBarPercentage" Font="Asap-Bold.otf" Size="12" Bpp="4" Direction="LTR" WildcardCharacterRanges="0-9" />
+    <Typography Id="ThreeWayProgressBarButton" Font="Asap-Bold.otf" Size="18" Bpp="4" Direction="LTR" />
+    <Typography Id="CustomControlsStatus" Font="Asap-Regular.ttf" Size="12" Bpp="4" Direction="LTR" />
+    <Typography Id="PercentageBarReadout" Font="Asap-Bold.otf" Size="46" Bpp="4" Direction="LTR" WildcardCharacterRanges="0-9" />
+    <Typography Id="PercentageBarHeadline" Font="Asap-Regular.ttf" Size="15" Bpp="4" Direction="LTR" />
+    <Typography Id="DatePicker" Font="Asap-Bold.otf" Size="15" Bpp="4" Direction="LTR" />
+    <Typography Id="EasingEquation" Font="Asap-Bold.otf" Size="18" Bpp="4" Direction="LTR" />
+    <Typography Id="EasingEquationButton" Font="Asap-Regular.ttf" Size="15" Bpp="4" Direction="LTR" />
+    <Typography Id="Graph_Y_value" Font="Asap-Regular.ttf" Size="15" Bpp="4" Direction="LTR" WildcardCharacters="1234567890-" />
+    <Typography Id="Graph_legend" Font="Asap-Regular.ttf" Size="12" Bpp="4" Direction="LTR" />
+    <Typography Id="Graph_legend_value" Font="Asap-Bold.otf" Size="12" Bpp="4" Direction="LTR" WildcardCharacters="1234567890.,-" />
+    <Typography Id="PosterTextJapanese" Font="ipaexg.ttf" Size="12" Bpp="4" Direction="LTR" />
+    <Typography Id="PosterHeadlineJapanese" Font="ipaexg.ttf" Size="18" Bpp="4" Direction="LTR" />
+    <Typography Id="PosterTextUkr" Font="NotoSans-Regular.ttf" Size="12" Bpp="4" Direction="LTR" />
+    <Typography Id="PosterHeadlineUkr" Font="NotoSans-Regular.ttf" Size="18" Bpp="4" Direction="LTR" />
+  </Typographies>
+</TextDatabase>

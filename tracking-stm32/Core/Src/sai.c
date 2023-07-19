@@ -1,3 +1,4 @@
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * File Name          : SAI.c
@@ -6,20 +7,19 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
   */
+/* USER CODE END Header */
+
 /* Includes ------------------------------------------------------------------*/
 #include "sai.h"
-
-#include "gpio.h"
 
 /* USER CODE BEGIN 0 */
 
@@ -73,7 +73,6 @@ void MX_SAI1_Init(void)
   {
     Error_Handler();
   }
-
   hsai_BlockB1.Instance = SAI1_Block_B;
   hsai_BlockB1.Init.Protocol = SAI_FREE_PROTOCOL;
   hsai_BlockB1.Init.AudioMode = SAI_MODEMASTER_TX;
@@ -105,7 +104,6 @@ void MX_SAI1_Init(void)
   {
     Error_Handler();
   }
-
   /* USER CODE BEGIN SAI1_Init 2 */
 
   /* USER CODE END SAI1_Init 2 */
@@ -113,15 +111,16 @@ void MX_SAI1_Init(void)
 }
 static uint32_t SAI1_client =0;
 
-void HAL_SAI_MspInit(SAI_HandleTypeDef* hsai)
+void HAL_SAI_MspInit(SAI_HandleTypeDef* saiHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct;
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
 /* SAI1 */
-    if(hsai->Instance==SAI1_Block_A)
+    if(saiHandle->Instance==SAI1_Block_A)
     {
     /* SAI1 clock enable */
+
   /** Initializes the peripherals clock
   */
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SAI1;
@@ -148,9 +147,10 @@ void HAL_SAI_MspInit(SAI_HandleTypeDef* hsai)
     HAL_GPIO_Init(SAI1_SD_A_GPIO_Port, &GPIO_InitStruct);
 
     }
-    if(hsai->Instance==SAI1_Block_B)
+    if(saiHandle->Instance==SAI1_Block_B)
     {
       /* SAI1 clock enable */
+
   /** Initializes the peripherals clock
   */
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SAI1;
@@ -182,11 +182,11 @@ void HAL_SAI_MspInit(SAI_HandleTypeDef* hsai)
     }
 }
 
-void HAL_SAI_MspDeInit(SAI_HandleTypeDef* hsai)
+void HAL_SAI_MspDeInit(SAI_HandleTypeDef* saiHandle)
 {
 
 /* SAI1 */
-    if(hsai->Instance==SAI1_Block_A)
+    if(saiHandle->Instance==SAI1_Block_A)
     {
     SAI1_client --;
     if (SAI1_client == 0)
@@ -201,7 +201,7 @@ void HAL_SAI_MspDeInit(SAI_HandleTypeDef* hsai)
     HAL_GPIO_DeInit(SAI1_SD_A_GPIO_Port, SAI1_SD_A_Pin);
 
     }
-    if(hsai->Instance==SAI1_Block_B)
+    if(saiHandle->Instance==SAI1_Block_B)
     {
     SAI1_client --;
       if (SAI1_client == 0)
@@ -228,5 +228,3 @@ void HAL_SAI_MspDeInit(SAI_HandleTypeDef* hsai)
 /**
   * @}
   */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,0 +1,926 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "MainMenu",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "backgroundLeft",
+            "Width": 50,
+            "Height": 272,
+            "RelativeFilename": "MainMenu\\menu_stage_stretch_left_side.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "backgroundRight",
+            "X": 430,
+            "Width": 50,
+            "Height": 272,
+            "RelativeFilename": "MainMenu\\menu_stage_stretch_right_side.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "demoScreensContainer00",
+            "Width": 480,
+            "Height": 272,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "demoScreenBackground00",
+                "Width": 480,
+                "Height": 272,
+                "RelativeFilename": "MainMenu\\menu_demo_screen_02.png"
+              },
+              {
+                "Type": "Button",
+                "Name": "demoScreenButton00",
+                "X": 318,
+                "Y": 137,
+                "Width": 134,
+                "Height": 55,
+                "Pressed": "MainMenu\\demo_button_02_03_pressed.png",
+                "Released": "MainMenu\\demo_button_02_03.png"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "demoScreensContainer01",
+            "Width": 480,
+            "Height": 272,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "demoScreenBackground01",
+                "Width": 480,
+                "Height": 272,
+                "RelativeFilename": "MainMenu\\menu_demo_screen_03.png"
+              },
+              {
+                "Type": "Button",
+                "Name": "demoScreenButton01",
+                "X": 318,
+                "Y": 137,
+                "Width": 134,
+                "Height": 55,
+                "Pressed": "MainMenu\\demo_button_02_03_pressed.png",
+                "Released": "MainMenu\\demo_button_02_03.png"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "demoScreensContainer02",
+            "Width": 480,
+            "Height": 272,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "demoScreenBackground02",
+                "Width": 480,
+                "Height": 272,
+                "RelativeFilename": "MainMenu\\menu_demo_screen_04.png"
+              },
+              {
+                "Type": "Button",
+                "Name": "demoScreenButton02",
+                "X": 318,
+                "Y": 137,
+                "Width": 134,
+                "Height": 55,
+                "Pressed": "MainMenu\\demo_button_04_pressed.png",
+                "Released": "MainMenu\\demo_button_04.png"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "demoScreensContainer03",
+            "Width": 480,
+            "Height": 272,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "demoScreenBackground03",
+                "Width": 480,
+                "Height": 272,
+                "RelativeFilename": "MainMenu\\menu_demo_screen_05.png"
+              },
+              {
+                "Type": "Button",
+                "Name": "demoScreenButton03",
+                "X": 318,
+                "Y": 137,
+                "Width": 134,
+                "Height": 55,
+                "Pressed": "MainMenu\\demo_button_05_06_pressed.png",
+                "Released": "MainMenu\\demo_button_05_06.png"
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mcuLoad",
+            "X": 370,
+            "Y": 10,
+            "Width": 96,
+            "Height": 20,
+            "CustomContainerDefinitionName": "McuLoadWidget"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "demoScreenButton00Clicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "demoScreenButton00"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "CustomControls"
+            }
+          },
+          {
+            "InteractionName": "demoScreenButton01Clicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "demoScreenButton01"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "EasingEquation"
+            }
+          },
+          {
+            "InteractionName": "demoScreenButton02Clicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "demoScreenButton02"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "ProductPresenter"
+            }
+          },
+          {
+            "InteractionName": "demoScreenButton03Clicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "demoScreenButton03"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "Graph"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Graph",
+        "Components": [
+          {
+            "Type": "Container",
+            "Name": "graphArea",
+            "Width": 480,
+            "Height": 198,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "graphBackground",
+                "Width": 480,
+                "Height": 198,
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "backgroundBottom",
+            "Y": 198,
+            "Width": 480,
+            "Height": 74,
+            "RelativeFilename": "Graph\\graph_background_bottom.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "newButton",
+            "X": 75,
+            "Y": 207,
+            "Width": 110,
+            "Height": 58,
+            "Pressed": "Graph\\new_graph_pressed.png",
+            "Released": "Graph\\new_graph.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "graphOrPieButton",
+            "X": 10,
+            "Y": 207,
+            "Width": 55,
+            "Height": 58,
+            "Pressed": "Graph\\graph_toggle_button_inactive.png",
+            "Released": "Graph\\graph_toggle_button_active.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "donutOrPieButton",
+            "X": 195,
+            "Y": 207,
+            "Width": 55,
+            "Height": 58,
+            "Pressed": "Graph\\half_circle_toggle_button_inactive.png",
+            "Released": "Graph\\half_circle_toggle_button_active.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "topMenuContainer",
+            "Y": -75,
+            "Width": 480,
+            "Height": 75,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "topMenuBackground",
+                "Width": 480,
+                "Height": 75,
+                "Color": {
+                  "Red": 220,
+                  "Green": 224,
+                  "Blue": 227
+                }
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "primaryGraphLineSetting",
+                "X": 44,
+                "Y": 10,
+                "Width": 57,
+                "Height": 58,
+                "Pressed": "Graph\\blue_line_button_active.png",
+                "Released": "Graph\\blue_line_button_inactive.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "primaryGraphDotSetting",
+                "X": 110,
+                "Y": 10,
+                "Width": 57,
+                "Height": 58,
+                "Pressed": "Graph\\blue_dots_button_active.png",
+                "Released": "Graph\\blue_dots_button_inactive.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "primaryGraphAreaSetting",
+                "X": 176,
+                "Y": 10,
+                "Width": 57,
+                "Height": 58,
+                "Pressed": "Graph\\blue_area_button_active.png",
+                "Released": "Graph\\blue_area_button_inactive.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "secondaryGraphLineSetting",
+                "X": 242,
+                "Y": 10,
+                "Width": 57,
+                "Height": 58,
+                "Pressed": "Graph\\green_line_button_active.png",
+                "Released": "Graph\\green_line_button_inactive.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "secondaryGraphDotSetting",
+                "X": 307,
+                "Y": 10,
+                "Width": 57,
+                "Height": 58,
+                "Pressed": "Graph\\green_dots_button_active.png",
+                "Released": "Graph\\green_dots_button_inactive.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "secondaryGraphAreaSetting",
+                "X": 374,
+                "Y": 10,
+                "Width": 57,
+                "Height": 58,
+                "Pressed": "Graph\\green_area_button_active.png",
+                "Released": "Graph\\green_area_button_inactive.png"
+              }
+            ]
+          },
+          {
+            "Type": "Button",
+            "Name": "gotoMenu",
+            "X": 404,
+            "Y": 199,
+            "Width": 76,
+            "Height": 73,
+            "Pressed": "Graph\\graph_menu_button_pressed.png",
+            "Released": "Graph\\graph_menu_button.png"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mcuLoad",
+            "X": 364,
+            "Y": 10,
+            "Width": 96,
+            "Height": 20,
+            "CustomContainerDefinitionName": "McuLoadWidget"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "gotoMenuClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoMenu"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "MainMenu"
+            }
+          },
+          {
+            "InteractionName": "primaryGraphLineSettingClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "primaryGraphLineSetting"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "updateGraphSettings"
+            }
+          },
+          {
+            "InteractionName": "primaryGraphDotSettingClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "primaryGraphDotSetting"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "updateGraphSettings();"
+            }
+          },
+          {
+            "InteractionName": "primaryGraphAreaSettingClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "primaryGraphAreaSetting"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "updateGraphSettings();"
+            }
+          },
+          {
+            "InteractionName": "secondaryGraplLineSettingClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "secondaryGraphLineSetting"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "updateGraphSettings();"
+            }
+          },
+          {
+            "InteractionName": "secondaryGraphDotSettingClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "secondaryGraphDotSetting"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "updateGraphSettings();"
+            }
+          },
+          {
+            "InteractionName": "secondaryGraphAreaSettingClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "secondaryGraphAreaSetting"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "updateGraphSettings();"
+            }
+          },
+          {
+            "InteractionName": "NewButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "newButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "newButtonPressed"
+            }
+          },
+          {
+            "InteractionName": "GraphOrPieButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "graphOrPieButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "graphOrPieButtonPressed"
+            }
+          },
+          {
+            "InteractionName": "DonutOrPieButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "donutOrPieButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "donutOrPieButtonPressed"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "CustomControls",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "menuBackground",
+            "Width": 100,
+            "Height": 272,
+            "RelativeFilename": "CustomControls\\controls_menu_background.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "background",
+            "X": 100,
+            "Width": 380,
+            "Height": 272,
+            "RelativeFilename": "CustomControls\\controls_background.png"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mcuLoad",
+            "X": 374,
+            "Y": 240,
+            "Width": 96,
+            "Height": 20,
+            "CustomContainerDefinitionName": "McuLoadWidget"
+          },
+          {
+            "Type": "Button",
+            "Name": "menuUp",
+            "Width": 96,
+            "Height": 56,
+            "Pressed": "CustomControls\\control_menu_arrow_up_pressed.png",
+            "Released": "CustomControls\\control_menu_arrow_up.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "menuDown",
+            "Y": 216,
+            "Width": 96,
+            "Height": 56,
+            "Pressed": "CustomControls\\control_menu_arrow_down_pressed.png",
+            "Released": "CustomControls\\control_menu_arrow_down.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "gotoMenu",
+            "X": 417,
+            "Y": 2,
+            "Width": 60,
+            "Height": 58,
+            "Pressed": "CustomControls\\control_menu_button_pressed.png",
+            "Released": "CustomControls\\control_menu_button.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "menuUpClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "menuUp"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "menuUpClickedHandler"
+            }
+          },
+          {
+            "InteractionName": "menuDownClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "menuDown"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "menuDownClickedHandler"
+            }
+          },
+          {
+            "InteractionName": "gotoMenuClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoMenu"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "MainMenu"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "EasingEquation",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "EasingEquation\\easing_background.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "gotoMenuButton",
+            "X": 420,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "EasingEquation\\easing_menu_button_pressed.png",
+            "Released": "EasingEquation\\easing_menu_button.png"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mcuLoad",
+            "X": 232,
+            "Y": 10,
+            "Width": 96,
+            "Height": 20,
+            "CustomContainerDefinitionName": "McuLoadWidget"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "easingEquationName",
+            "X": 212,
+            "Y": 30,
+            "Width": 136,
+            "Height": 24,
+            "TextId": "Easing_Equation_Sinusoidal",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 65,
+              "Green": 93,
+              "Blue": 98
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "dot",
+            "X": 150,
+            "Y": 197,
+            "Width": 13,
+            "Height": 13,
+            "RelativeFilename": "EasingEquation\\easing_dot.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "graphDot",
+            "X": 179,
+            "Y": 160,
+            "Width": 9,
+            "Height": 9,
+            "Visible": false,
+            "RelativeFilename": "EasingEquation\\graphDot.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "gotoMenuButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoMenuButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "MainMenu"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ProductPresenter",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "navigationBar",
+            "Y": 218,
+            "Width": 480,
+            "Height": 54,
+            "RelativeFilename": "productpresenter\\product_presenter_nav_bar.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "textBackground",
+            "X": 210,
+            "Width": 270,
+            "Height": 218,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "shadowBox",
+            "X": 210,
+            "Width": 1,
+            "Height": 218
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "textAreaContainer",
+            "X": 210,
+            "Y": 53,
+            "Width": 270,
+            "Height": 165,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "bodyText",
+                "X": 18,
+                "Width": 234,
+                "Height": 238,
+                "TextId": "Poster_Text_00",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 118,
+                  "Green": 118,
+                  "Blue": 118
+                },
+                "Fadeable": true
+              }
+            ]
+          },
+          {
+            "Type": "Button",
+            "Name": "nextButton",
+            "X": 424,
+            "Width": 56,
+            "Height": 53,
+            "Pressed": "productpresenter\\product_presenter_next_pressed.png",
+            "Released": "productpresenter\\product_presenter_next.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "headlineText",
+            "X": 228,
+            "Y": 20,
+            "Width": 210,
+            "Height": 26,
+            "TextId": "Poster_Headline_00",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 118,
+              "Green": 118,
+              "Blue": 118
+            },
+            "Moveable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "headlineTextSwap",
+            "X": 228,
+            "Y": 20,
+            "Width": 210,
+            "Height": 26,
+            "TextId": "Poster_Headline_00",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 118,
+              "Green": 118,
+              "Blue": 118
+            },
+            "Moveable": true
+          },
+          {
+            "Type": "Container",
+            "Name": "posterContainer",
+            "Width": 210,
+            "Height": 218,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "poster",
+                "Width": 210,
+                "Height": 218,
+                "RelativeFilename": "productpresenter\\poster_image_00.png",
+                "Moveable": true
+              },
+              {
+                "Type": "Image",
+                "Name": "posterSwap",
+                "Width": 210,
+                "Height": 218,
+                "RelativeFilename": "productpresenter\\poster_image_00.png",
+                "Moveable": true
+              }
+            ]
+          },
+          {
+            "Type": "Button",
+            "Name": "gotoMenuButton",
+            "X": 2,
+            "Y": 218,
+            "Width": 60,
+            "Height": 54,
+            "Pressed": "productpresenter\\product_presenter_menu_button_pressed.png",
+            "Released": "productpresenter\\product_presenter_menu_button.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "activateLanguageSelectorButton",
+            "X": 419,
+            "Y": 231,
+            "Width": 44,
+            "Height": 29,
+            "Pressed": "productpresenter\\flag_gbr_inactive.png",
+            "Released": "productpresenter\\flag_gbr_inactive.png"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mcuLoad",
+            "X": 8,
+            "Y": 200,
+            "Width": 96,
+            "Height": 20,
+            "CustomContainerDefinitionName": "McuLoadWidget"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "nextbuttonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "nextButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "nextbuttonPressed"
+            }
+          },
+          {
+            "InteractionName": "gotoMenuButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoMenuButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "MainMenu"
+            }
+          },
+          {
+            "InteractionName": "activateLanguageSelectorButtonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "activateLanguageSelectorButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "activateLanguageSelectorButtonClicked"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "McuLoadWidget",
+        "Width": 96,
+        "Height": 20,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "mcuLoadTxt",
+            "Width": 59,
+            "Height": 14,
+            "TextId": "Demo_View_Mcu_Load_text",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "mcuLoadValueTxt",
+            "X": 62,
+            "Width": 34,
+            "Height": 14,
+            "TextId": "Demo_View_Mcu_Load_value",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "TouchGFX",
+    "Resolution": {
+      "Width": 32,
+      "Height": 32
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "MainMenu",
+    "SelectedStartupLanguage": "GBR",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp",
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 32,
+        "Height": 32
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H725/735",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../tracker-stm32.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": []
+  },
+  "Version": "4.22.0",
+  "CreatedBy": "4.22.0"
+}

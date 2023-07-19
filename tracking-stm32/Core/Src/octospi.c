@@ -1,3 +1,4 @@
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    octospi.c
@@ -6,17 +7,16 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
   */
-
+/* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "octospi.h"
 
@@ -52,8 +52,7 @@ void MX_OCTOSPI1_Init(void)
   hospi1.Init.ClockPrescaler = 1;
   hospi1.Init.SampleShifting = HAL_OSPI_SAMPLE_SHIFTING_NONE;
   hospi1.Init.DelayHoldQuarterCycle = HAL_OSPI_DHQC_DISABLE;
-  hospi1.Init.ChipSelectBoundary = 1;
-  hospi1.Init.ClkChipSelectHighTime = 0;
+  hospi1.Init.ChipSelectBoundary = 0;
   hospi1.Init.DelayBlockBypass = HAL_OSPI_DELAY_BLOCK_BYPASSED;
   hospi1.Init.MaxTran = 0;
   hospi1.Init.Refresh = 0;
@@ -101,8 +100,7 @@ void MX_OCTOSPI2_Init(void)
   hospi2.Init.ClockPrescaler = 1;
   hospi2.Init.SampleShifting = HAL_OSPI_SAMPLE_SHIFTING_NONE;
   hospi2.Init.DelayHoldQuarterCycle = HAL_OSPI_DHQC_DISABLE;
-  hospi2.Init.ChipSelectBoundary = 1;
-  hospi2.Init.ClkChipSelectHighTime = 0;
+  hospi2.Init.ChipSelectBoundary = 0;
   hospi2.Init.DelayBlockBypass = HAL_OSPI_DELAY_BLOCK_BYPASSED;
   hospi2.Init.MaxTran = 0;
   hospi2.Init.Refresh = 0;
@@ -133,6 +131,8 @@ void MX_OCTOSPI2_Init(void)
 
 }
 
+static uint32_t HAL_RCC_OCTOSPIM_CLK_ENABLED=0;
+
 void HAL_OSPI_MspInit(OSPI_HandleTypeDef* ospiHandle)
 {
 
@@ -143,6 +143,7 @@ void HAL_OSPI_MspInit(OSPI_HandleTypeDef* ospiHandle)
   /* USER CODE BEGIN OCTOSPI1_MspInit 0 */
 
   /* USER CODE END OCTOSPI1_MspInit 0 */
+
   /** Initializes the peripherals clock
   */
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_OSPI;
@@ -153,6 +154,10 @@ void HAL_OSPI_MspInit(OSPI_HandleTypeDef* ospiHandle)
     }
 
     /* OCTOSPI1 clock enable */
+    HAL_RCC_OCTOSPIM_CLK_ENABLED++;
+    if(HAL_RCC_OCTOSPIM_CLK_ENABLED==1){
+      __HAL_RCC_OCTOSPIM_CLK_ENABLE();
+    }
     __HAL_RCC_OSPI1_CLK_ENABLE();
 
     __HAL_RCC_GPIOG_CLK_ENABLE();
@@ -242,6 +247,10 @@ void HAL_OSPI_MspInit(OSPI_HandleTypeDef* ospiHandle)
     }
 
     /* OCTOSPI2 clock enable */
+    HAL_RCC_OCTOSPIM_CLK_ENABLED++;
+    if(HAL_RCC_OCTOSPIM_CLK_ENABLED==1){
+      __HAL_RCC_OCTOSPIM_CLK_ENABLE();
+    }
     __HAL_RCC_OSPI2_CLK_ENABLE();
 
     __HAL_RCC_GPIOG_CLK_ENABLE();
@@ -296,6 +305,10 @@ void HAL_OSPI_MspDeInit(OSPI_HandleTypeDef* ospiHandle)
 
   /* USER CODE END OCTOSPI1_MspDeInit 0 */
     /* Peripheral clock disable */
+    HAL_RCC_OCTOSPIM_CLK_ENABLED--;
+    if(HAL_RCC_OCTOSPIM_CLK_ENABLED==0){
+      __HAL_RCC_OCTOSPIM_CLK_DISABLE();
+    }
     __HAL_RCC_OSPI1_CLK_DISABLE();
 
     /**OCTOSPI1 GPIO Configuration
@@ -332,6 +345,10 @@ void HAL_OSPI_MspDeInit(OSPI_HandleTypeDef* ospiHandle)
 
   /* USER CODE END OCTOSPI2_MspDeInit 0 */
     /* Peripheral clock disable */
+    HAL_RCC_OCTOSPIM_CLK_ENABLED--;
+    if(HAL_RCC_OCTOSPIM_CLK_ENABLED==0){
+      __HAL_RCC_OCTOSPIM_CLK_DISABLE();
+    }
     __HAL_RCC_OSPI2_CLK_DISABLE();
 
     /**OCTOSPI2 GPIO Configuration
@@ -362,5 +379,3 @@ void HAL_OSPI_MspDeInit(OSPI_HandleTypeDef* ospiHandle)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
