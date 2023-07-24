@@ -14,7 +14,7 @@ plugins {
 group = "com.tcompany"
 version = "0.0.1"
 application {
-    mainClass.set("com.tcompany.ApplicationKt")
+    mainClass.set("com.tcompany.tracker.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
