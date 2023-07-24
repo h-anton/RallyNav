@@ -5,7 +5,7 @@ import { DependencyList, useEffect, useState } from "react"
 
 const axios: AxiosInstance = _axios.create({
     withCredentials: true,
-    baseURL: "http://localhost:8080",
+    baseURL: window.location.origin.includes("localhost") ? "http://localhost:3000" : (window.location.origin + "/api"),
     headers: {
         'Content-Type': 'application/json'
     }
