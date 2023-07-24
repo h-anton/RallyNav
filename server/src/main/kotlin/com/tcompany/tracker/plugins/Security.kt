@@ -24,7 +24,8 @@ fun Application.configureSecurity() {
     install(CORS) {
         allowHeader(HttpHeaders.ContentType)
         allowCredentials = true
-        allowHost("localhost:3000")
+        allowHost("localhost:3010")
+        allowHost("demo.ewoudje.com") // TODO Should be fetched from config
     }
 
     authentication {
