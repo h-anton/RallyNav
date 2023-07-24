@@ -50,17 +50,19 @@ export default function UploadTripPage() {
         <Grid container justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
             {
                 success ? (
-                    <Card>
+                    <Card sx={{width: "40%"}}>
                         <CardContent>
                             <Typography alignContent="center">Upload suceeded</Typography>
                         </CardContent>
                         <CardActions>
-                            <Grid container justifyContent="center" alignItems="center">
-                                <Grid item m={2}>
-                                    <Button variant="contained" onClick={() => navigate(-1)}>Go back</Button>
+                            <Grid container>
+                                <Grid item xs={6} p={1}>
+                                    <Button variant="contained" sx={{width: "100%"}} onClick={() => navigate(-1)}>
+                                        Go Back
+                                    </Button>
                                 </Grid>
-                                <Grid item m={2}>
-                                    <Button variant="contained" onClick={() => {
+                                <Grid item xs={6} p={1}>
+                                    <Button variant="contained" sx={{width: "100%"}} onClick={() => {
                                         setSuccess(false)
                                         setFile(undefined)
                                     }}>Upload another trip</Button>
@@ -77,7 +79,12 @@ export default function UploadTripPage() {
                         </CardContent>
                         <CardActions>
                             <Grid container justifyContent="center" alignItems="center">
-                                <Button variant="contained" onClick={handleUploadClick}>Upload</Button>
+                                <Grid item xs={4} p={1}>
+                                    <Button variant="contained" sx={{width: "100%"}} onClick={() => navigate(-1)}>Back</Button>
+                                </Grid>
+                                <Grid item xs={8} p={1}>
+                                    <Button variant="contained" sx={{width: "100%"}} onClick={handleUploadClick}>Upload</Button>
+                                </Grid>
                             </Grid>
                         </CardActions>
                     </Card>
