@@ -11,9 +11,11 @@ fun main() {
             module()
         }
 
+        val myPort = config.propertyOrNull("ktor.deployment.port")?.getString()?.toInt()
+
         connector {
             host = "0.0.0.0"
-            port = 8080
+            port = myPort ?: 3000
         }
 
         developmentMode = true
