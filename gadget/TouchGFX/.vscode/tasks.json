@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "build simulator",
+            "command": "D:\\Data\\Programs\\TouchGFX-4.22.0\\env\\MinGW\\msys\\1.0\\bin\\env.exe",
+            "args": [
+                "MSYSTEM=MINGW64",
+                "D:\\Data\\Programs\\TouchGFX-4.22.0\\env\\MinGW\\msys\\1.0\\bin\\bash.exe",
+                "-l", "-c",
+                "cd /d/Projects/RallyNav/gadget/TouchGFX && make -f simulator/gcc/Makefile -j8"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+        }
+    ],
+    "version": "2.0.0"
+}

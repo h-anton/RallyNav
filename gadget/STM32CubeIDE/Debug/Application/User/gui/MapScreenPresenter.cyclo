@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/mapscreen_screen/MapScreenPresenter.hpp:28:13:MapScreenPresenter::~MapScreenPresenter()	1
+D:/Projects/RallyNav/gadget/TouchGFX/gui/src/mapscreen_screen/MapScreenPresenter.cpp:10:6:virtual void MapScreenPresenter::activate()	1
+../../TouchGFX/gui/include/gui/mapscreen_screen/MapScreenPresenter.hpp:28:13:virtual MapScreenPresenter::~MapScreenPresenter()	1
+../../TouchGFX/gui/include/gui/mapscreen_screen/MapScreenPresenter.hpp:28:13:virtual void* MapScreenPresenter::_ZThn4_N18MapScreenPresenterD1Ev()	1
+D:/Projects/RallyNav/gadget/TouchGFX/gui/src/mapscreen_screen/MapScreenPresenter.cpp:4:1:MapScreenPresenter::MapScreenPresenter(MapScreenView&)	1

@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "${workspaceFolder}/gui/include",
+                "${workspaceFolder}/generated/fonts/include",
+                "${workspaceFolder}/generated/gui_generated/include",
+                "${workspaceFolder}/generated/images/include",
+                "${workspaceFolder}/generated/texts/include",
+                "${workspaceFolder}/../Middlewares/ST/touchgfx/framework/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "D:\\Data\\Programs\\TouchGFX-4.22.0\\env\\MinGW\\bin\\gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
