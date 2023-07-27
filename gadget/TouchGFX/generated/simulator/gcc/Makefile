@@ -72,7 +72,7 @@ simulator_executable := simulator.exe
 $(resource_file): $(resource_file:%.res=%.rc) $(resource_file:%.res=%.ico)
 	@echo Creating Windows resource file with program icon
 	@windres $(resource_file:%.res=%.rc) -O coff -o $@
-linker_options += -static-libgcc -static-libstdc++
+linker_options += -static-libgcc -static-libstdc++ -static
 endif
 
 c_compiler           := g++
