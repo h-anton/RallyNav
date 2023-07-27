@@ -1,3 +1,6 @@
 [submodule "libosmscout"]
 	path = libosmscout
 	url = https://github.com/Framstag/libosmscout
+[submodule "gadget/TouchGFX/libraries/libosmscout"]
+	path = gadget/TouchGFX/libraries/libosmscout
+	url = https://github.com/Framstag/libosmscout

@@ -4,14 +4,14 @@
             "name": "debug simulator",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\build\\bin\\simulator.exe",
+            "program": "${workspaceFolder}/build/bin/simulator.out",
             "cwd": "${workspaceFolder}",
             "args": [],
             "stopAtEntry": false,
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\Data\\msys64\\usr\\bin\\gdb.exe",
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

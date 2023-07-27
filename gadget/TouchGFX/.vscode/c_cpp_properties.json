@@ -8,7 +8,11 @@
                 "${workspaceFolder}/generated/gui_generated/include",
                 "${workspaceFolder}/generated/images/include",
                 "${workspaceFolder}/generated/texts/include",
-                "${workspaceFolder}/../Middlewares/ST/touchgfx/framework/include"
+                "${workspaceFolder}/../Middlewares/ST/touchgfx/framework/include",
+                "${workspaceFolder}/build/libraries/libosmscout/libosmscout/include",
+                "${workspaceFolder}/build/libraries/libosmscout/libosmscout-map/include",
+                "${workspaceFolder}/libraries/libosmscout/libosmscout/include",
+                "${workspaceFolder}/libraries/libosmscout/libosmscout-map/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -16,7 +20,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.22000.0",
-            "compilerPath": "D:\\Data\\Programs\\TouchGFX-4.22.0\\env\\MinGW\\bin\\gcc.exe",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64"
