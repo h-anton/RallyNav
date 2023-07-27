@@ -36,9 +36,10 @@ build-libraries: lib/libosmscout.a lib/libosmscout_map.a build/bin/libosmscout.d
 
 lib/libosmscout.a lib/libosmscout_map.a build/bin/libosmscout.dll build/bin/libosmscout_map.dll:
 	-mkdir -p build/libraries/libosmscout
+	-mkdir -p build/bin
 	cd build/libraries/libosmscout \
 	&& cmake \
-		-G "MSYS Makefiles"
+		-G "MSYS Makefiles" \
 	    -DCMAKE_BUILD_TYPE=Release \
 	    -DOSMSCOUT_BUILD_DEMOS=OFF \
 	    -DOSMSCOUT_BUILD_TOOL_DUMPDATA=OFF \

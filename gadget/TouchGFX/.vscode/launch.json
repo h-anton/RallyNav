@@ -4,14 +4,20 @@
             "name": "debug simulator",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/simulator.out",
-            "cwd": "${workspaceFolder}",
-            "args": [],
+            "program": "D:\\data\\msys64\\usr\\bin\\bash.exe",
+            "cwd": "${workspaceFolder}/build/bin",
+            "args": ["-lc", "./simulator.exe"],
             "stopAtEntry": false,
-            "environment": [],
+            "environment": [ {
+                "name": "CHERE_INVOKING",
+                "value": "yes"
+            }, {
+                "name": "MSYSTEM",
+                "value": "MINGW32"
+            }],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "D:\\Data\\msys64\\usr\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

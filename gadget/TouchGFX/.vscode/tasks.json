@@ -3,18 +3,19 @@
         {
             "type": "cppbuild",
             "label": "build simulator",
-            "command": "make",
+            "command": "D:\\data\\msys64\\usr\\bin\\bash.exe",
             "args": [
-                "-f", "simulator/gcc/Makefile", 
-                "-j8"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
+                "-lc",
+                "make -f simulator/gcc/Makefile -j8"
             ],
             "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "CHERE_INVOKING": "yes",
+                    "MSYSTEM": "MINGW32"
+                }
+            }
         }
     ],
     "version": "2.0.0"
