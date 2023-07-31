@@ -12,8 +12,10 @@ public:
     virtual ~MapScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    void setupMap(StyleConfigRef styleConfig, MapDataRef mapData, Projection* mapProjection);
 protected:
-    MapWidget map;
+    MapWidget mapWidget;
 };
 
 #endif // MAPSCREENVIEW_HPP

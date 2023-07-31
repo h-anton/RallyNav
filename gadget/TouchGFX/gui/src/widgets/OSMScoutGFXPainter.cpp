@@ -3,8 +3,20 @@
 
 const touchgfx::colortype color = 0x964B00;
 
-TouchGFXMapPainter::TouchGFXMapPainter() : MapPainter(StyleConfigRef())
+TouchGFXMapPainter::TouchGFXMapPainter(StyleConfigRef styleConfig) : MapPainter(styleConfig)
 {
+}
+
+void TouchGFXMapPainter::DrawCanvas(
+    touchgfx::Canvas &canvas,
+    const touchgfx::Rect &invalidatedArea,
+    const Projection &projection,
+    const MapParameter &parameter,
+    const MapData &data)
+{
+    this->canvas = &canvas;
+    //TODO change projection based on invalidated
+    this->Draw(projection, parameter, data);
 }
 
 void TouchGFXMapPainter::RegisterRegularLabel(
@@ -71,14 +83,23 @@ void TouchGFXMapPainter::DrawIcon(
 void TouchGFXMapPainter::DrawPath(
     const Projection &projection,
     const MapParameter &parameter,
-    const Color &color,
+    const osmscout::Color &color,
     double width,
     const std::vector<double> &dash,
     LineStyle::CapStyle startCap,
     LineStyle::CapStyle endCap,
     const CoordBufferRange &coordRange)
 {
-    //touchgfx::HAL::lcd().fillRect
+    double hWidth = width / 2.0;
+
+    canvas->moveTo(coordRange.GetFirst().GetX() + hWidth, coordRange.GetFirst().GetY() + hWidth);
+    for (size_t i = coordRange.GetStart()+1; i <=coordRange.GetEnd(); i++) {
+        canvas->lineTo(coordRange.Get(i).GetX() + hWidth, coordRange.Get(i).GetY() + hWidth);
+    }
+    for (size_t i = coordRange.GetEnd(); i >= coordRange.GetStart(); i--) {
+        canvas->lineTo(coordRange.Get(i).GetX() - hWidth, coordRange.Get(i).GetY() - hWidth);
+    }
+    canvas->lineTo(coordRange.GetFirst().GetX() + hWidth, coordRange.GetFirst().GetY() + hWidth);
 }
 
 void TouchGFXMapPainter::DrawContourSymbol(

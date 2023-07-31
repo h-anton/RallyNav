@@ -11,6 +11,8 @@
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 
 class MainScreenViewBase : public touchgfx::View<MainScreenPresenter>
 {
@@ -35,8 +37,16 @@ protected:
     touchgfx::TextArea button1_text;
     touchgfx::TextArea button2_test;
     touchgfx::TextArea button3_text;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB888 line1Painter;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

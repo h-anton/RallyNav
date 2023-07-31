@@ -2,23 +2,25 @@
 #define APPLICATION_USER_GUI_WIDGETS_MAPWIDGET_HPP_
 #define _USE_MATH_DEFINES
 
-#include <touchgfx/widgets/Widget.hpp>
+#include <touchgfx/widgets/canvas/CanvasWidget.hpp>
 #include <osmscout/db/Database.h>
 #include <osmscoutmap/MapService.h>
-#include <osmscout/projection/MercatorProjection.h>
 
 #include "gui/widgets/OSMScoutGFXPainter.hpp"
 
-class MapWidget : public touchgfx::Widget {
+class MapWidget : public touchgfx::CanvasWidget {
 public:
-	MapWidget() : Widget(), data(nullptr) {}
+	MapWidget();
 
-	virtual void draw(const touchgfx::Rect& invalidatedArea) const override;
-	virtual touchgfx::Rect getSolidRect() const override;
+	void setup(StyleConfigRef styleConfig, MapDataRef mapData, Projection* projection);
+	inline TouchGFXMapPainter const* getPainter() const;
+
+	virtual bool drawCanvasWidget(const touchgfx::Rect& invalidatedArea) const override;
 private:
-	osmscout::MapDataRef data;
-	TouchGFXMapPainter painter;
-	osmscout::MercatorProjection projection;
+	MapDataRef data;
+	Projection* projection;
+	//We initialize this later, but the way TouchGFX works, we need to have it already allocated
+	uint8_t _painter[sizeof(TouchGFXMapPainter)];
 };
 
 #endif /* APPLICATION_USER_GUI_WIDGETS_MAPWIDGET_HPP_ */

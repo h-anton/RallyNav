@@ -1,2 +1,4 @@
 build
 lib
+simulator/map/out
+*.pbf

@@ -32,11 +32,15 @@ all clean assets:
 	@$(MAKE) -r -f generated/simulator/gcc/Makefile -s $(MFLAGS) $@ -C "$(application_path)"
 endif
 
+clean-part:
+#-rm -r build/MINGW*/gui/src
+
 build-libraries: lib/libosmscout.a lib/libosmscout_map.a build/bin/libosmscout.dll build/bin/libosmscout_map.dll build/bin/libiconv-2.dll
 
 lib/libosmscout.a lib/libosmscout_map.a build/bin/libosmscout.dll build/bin/libosmscout_map.dll build/bin/libiconv-2.dll:
 	-mkdir -p build/libraries/libosmscout
 	-mkdir -p build/bin
+	-mkdir -p lib
 	cd build/libraries/libosmscout \
 	&& cmake \
 		-G "MSYS Makefiles" \
@@ -49,8 +53,8 @@ lib/libosmscout.a lib/libosmscout_map.a build/bin/libosmscout.dll build/bin/libo
 	    -DOSMSCOUT_BUILD_TESTS=OFF \
 	../../../libraries/libosmscout \
 	&& make -j8
-	cp build/libraries/libosmscout/libosmscout/libosmscout.dll.a lib/libosmscout.a
-	cp build/libraries/libosmscout/libosmscout-map/libosmscout_map.dll.a lib/libosmscout_map.a
-	cp build/libraries/libosmscout/libosmscout/libosmscout.dll build/bin/libosmscout.dll
-	cp build/libraries/libosmscout/libosmscout-map/libosmscout_map.dll build/bin/libosmscout_map.dll
-	cp /mingw32/bin/libiconv-2.dll build/bin/libiconv-2.dll
+	-cp build/libraries/libosmscout/libosmscout/libosmscout.dll.a lib/libosmscout.a
+	-cp build/libraries/libosmscout/libosmscout-map/libosmscout_map.dll.a lib/libosmscout_map.a
+	-cp build/libraries/libosmscout/libosmscout/libosmscout.dll build/bin/libosmscout.dll
+	-cp build/libraries/libosmscout/libosmscout-map/libosmscout_map.dll build/bin/libosmscout_map.dll
+	-cp /mingw32/bin/libiconv-2.dll build/bin/libiconv-2.dll

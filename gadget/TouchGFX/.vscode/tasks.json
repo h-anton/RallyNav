@@ -6,7 +6,7 @@
             "command": "D:\\data\\msys64\\usr\\bin\\bash.exe",
             "args": [
                 "-lc",
-                "make -f simulator/gcc/Makefile -j8"
+                "make -f simulator/gcc/Makefile clean-part all"
             ],
             "group": "build",
             "options": {

@@ -4,13 +4,21 @@
 
 #include <osmscoutmap/MapPainter.h>
 #include <touchgfx/hal/HAL.hpp>
+#include <touchgfx/widgets/canvas/Canvas.hpp>
 
 
 using namespace osmscout;
 
 class TouchGFXMapPainter : public osmscout::MapPainter {
+    touchgfx::Canvas *canvas;
 public:
-    explicit TouchGFXMapPainter();
+    explicit TouchGFXMapPainter(StyleConfigRef styleConfig);
+
+    void DrawCanvas(touchgfx::Canvas& canvas,
+                    const touchgfx::Rect& invalidatedArea,
+                    const Projection& projection,
+                    const MapParameter& parameter,
+                    const MapData& data);
 
 protected:
     void RegisterRegularLabel(const Projection& projection,
@@ -53,7 +61,7 @@ protected:
 
     void DrawPath(const Projection& projection,
                   const MapParameter& parameter,
-                  const Color& color,
+                  const osmscout::Color& color,
                   double width,
                   const std::vector<double>& dash,
                   LineStyle::CapStyle startCap,

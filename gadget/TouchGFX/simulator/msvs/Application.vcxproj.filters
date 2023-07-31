@@ -255,6 +255,9 @@
     <ClCompile Include="..\..\gui\src\widgets\MapWidget.cpp">
       <Filter>Source Files\gui\widgets</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\src\widgets\OSMScoutGFXPainter.cpp">
+      <Filter>Source Files\gui\widgets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml">
@@ -716,6 +719,9 @@
       <Filter>Header Files\generated\gui_generated\mapscreen_screen</Filter>
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\widgets\MapWidget.hpp">
+      <Filter>Header Files\gui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\widgets\OSMScoutGFXPainter.hpp">
       <Filter>Header Files\gui\widgets</Filter>
     </ClInclude>
   </ItemGroup>

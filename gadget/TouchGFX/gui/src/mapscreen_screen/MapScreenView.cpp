@@ -2,18 +2,23 @@
 
 MapScreenView::MapScreenView()
 {
-	map.setWidth(this->getScreenWidth());
-	map.setHeight(this->getScreenHeight());
-	map.setXY(0, 0);
-	add(map);
+	mapWidget.setWidth(this->getScreenWidth());
+	mapWidget.setHeight(this->getScreenHeight());
+	mapWidget.setXY(0, 0);
+	add(mapWidget);
+}
+
+void MapScreenView::setupMap(StyleConfigRef styleConfig, MapDataRef mapData, Projection* mapProjection)
+{
+	mapWidget.setup(styleConfig, mapData, mapProjection);
 }
 
 void MapScreenView::setupScreen()
 {
-    MapScreenViewBase::setupScreen();
+	MapScreenViewBase::setupScreen();
 }
 
 void MapScreenView::tearDownScreen()
 {
-    MapScreenViewBase::tearDownScreen();
+	MapScreenViewBase::tearDownScreen();
 }

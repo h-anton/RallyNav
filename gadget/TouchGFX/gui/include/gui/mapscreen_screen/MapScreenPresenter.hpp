@@ -1,6 +1,8 @@
 #ifndef MAPSCREENPRESENTER_HPP
 #define MAPSCREENPRESENTER_HPP
+#define _USE_MATH_DEFINES
 
+#include <osmscout/projection/MercatorProjection.h>
 #include <gui/model/ModelListener.hpp>
 #include <mvp/Presenter.hpp>
 
@@ -31,6 +33,8 @@ private:
     MapScreenPresenter();
 
     MapScreenView& view;
+    osmscout::MapDataRef mapData;
+    osmscout::MercatorProjection projection;
 };
 
 #endif // MAPSCREENPRESENTER_HPP

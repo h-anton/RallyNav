@@ -8,13 +8,7 @@
             "cwd": "${workspaceFolder}/build/bin",
             "args": [],
             "stopAtEntry": false,
-            "environment": [ {
-                "name": "CHERE_INVOKING",
-                "value": "yes"
-            }, {
-                "name": "MSYSTEM",
-                "value": "MINGW32"
-            }],
+            "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "D:\\Data\\msys64\\usr\\bin\\gdb.exe",

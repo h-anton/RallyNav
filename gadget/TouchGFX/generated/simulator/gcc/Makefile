@@ -55,7 +55,7 @@ resource_file :=
 imageconvert_executable := $(touchgfx_path)/framework/tools/imageconvert/build/linux/imageconvert.out
 fontconvert_executable := $(touchgfx_path)/framework/tools/fontconvert/build/linux/fontconvert.out
 simulator_executable := simulator.out
-linker_options += -static-libgcc -Xlinker --no-as-needed -no-pie
+linker_options += -static-libgcc -Xlinker --no-as-needed
 else
 sdl_library_path := $(touchgfx_path)/lib/sdl2/win32
 jpeg_library_path := $(touchgfx_path)/3rdparty/libjpeg/lib/win32
@@ -76,7 +76,7 @@ linker_options += -static-libgcc -static-libstdc++ -static
 endif
 
 c_compiler           := g++
-c_compiler_options   += -DSIMULATOR='' -g 
+c_compiler_options   += -DSIMULATOR='' -g
 cpp_compiler         := g++
 cpp_compiler_options += -g -DSIMULATOR='' -DENABLE_LOG -std=c++17
 linker               := g++
@@ -189,7 +189,7 @@ $(object_output_path)/touchgfx/%.o: $(touchgfx_path)/%.cpp config/gcc/app.mk
 	@mkdir -p $(@D)
 	@$(cpp_compiler) \
 		-MMD -MP $(cpp_compiler_options) $(cpp_compiler_options_local) $(user_cflags) \
-		$(patsubst %,-isystem %,$(include_paths)) \
+		$(patsubst %,-I%,$(include_paths)) \
 		-c $< -o $@
 
 $(object_output_path)/%.o: %.cpp config/gcc/app.mk
@@ -197,7 +197,7 @@ $(object_output_path)/%.o: %.cpp config/gcc/app.mk
 	@mkdir -p $(@D)
 	@$(cpp_compiler) \
 		-MMD -MP $(cpp_compiler_options) $(cpp_compiler_options_local) $(user_cflags) \
-		$(patsubst %,-isystem %,$(include_paths)) \
+		$(patsubst %,-I%,$(include_paths)) \
 		-c $< -o $@
 
 $(object_output_path)/%.o: %.c config/gcc/app.mk
@@ -205,7 +205,7 @@ $(object_output_path)/%.o: %.c config/gcc/app.mk
 	@mkdir -p $(@D)
 	@$(c_compiler) \
 		-MMD -MP $(c_compiler_options) $(c_compiler_options_local) $(user_cflags) \
-		$(patsubst %,-isystem %,$(include_paths)) \
+		$(patsubst %,-I%,$(include_paths)) \
 		-c $< -o $@
 
 ifeq ($(MAKECMDGOALS),build_executable)

@@ -354,6 +354,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/widgets/MapWidget.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/OSMScoutGFXPainter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/widgets/OSMScoutGFXPainter.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>

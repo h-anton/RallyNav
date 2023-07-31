@@ -3,6 +3,7 @@
     "Screens": [
       {
         "Name": "MainScreen",
+        "CanvasBufferSize": 7200,
         "Components": [
           {
             "Type": "ScrollableContainer",
@@ -54,7 +55,7 @@
                 "X": 79,
                 "Y": 25,
                 "Width": 88,
-                "Height": 20,
+                "Height": 24,
                 "TextId": "button1",
                 "TextRotation": "0",
                 "AutoSize": true
@@ -65,7 +66,7 @@
                 "X": 81,
                 "Y": 84,
                 "Width": 88,
-                "Height": 20,
+                "Height": 24,
                 "TextId": "button2",
                 "TextRotation": "0",
                 "AutoSize": true
@@ -76,12 +77,31 @@
                 "X": 81,
                 "Y": 141,
                 "Width": 88,
-                "Height": 20,
+                "Height": 24,
                 "TextId": "button3",
                 "TextRotation": "0",
                 "AutoSize": true
               }
             ]
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 13,
+            "Y": 69,
+            "Width": 200,
+            "Height": 50,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 150.0,
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Round"
           }
         ],
         "Interactions": [
